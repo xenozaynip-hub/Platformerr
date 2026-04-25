@@ -45,8 +45,8 @@ def load_sprite_sheets(dir1, dir2, width, height, direction=False):
 class Player(pygame.sprite.Sprite):
     COLOR = (0, 0, 0)
     GRAVITY = 1
-    SPRITES = load_sprite_sheets("MainCharacters","VirtualGuy",32, 32, True)
-    ANIMATION_DELAY = 6
+    SPRITES = load_sprite_sheets("MainCharacters","Cat",32, 32, True)
+    ANIMATION_DELAY = 12
 
     def __init__(self, x, y, width, height):
         super().__init__()
