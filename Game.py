@@ -96,7 +96,7 @@ class Player(pygame.sprite.Sprite):
 
     def hit_head(self):
         self.count = 0
-        self.y_vel *= 1
+        self.y_vel *= -1
 
     def update_sprite(self):
         sprite_sheet = "idle"
@@ -171,7 +171,7 @@ def handle_vertical_collision(player, objects, dy):
                 player.rect.top = obj.rect.bottom
                 player.hit_head()
 
-            collided_objects.apped(obj)
+            collided_objects.append(obj)
 
     return collided_objects
 
@@ -183,7 +183,7 @@ def handle_move(player, objects):
    if keys[pygame.K_d]:
         player.move_right(PLAYER_VEL)
 
-        handle_vertical_collision(player, objects, player.y_vel)
+   handle_vertical_collision(player, objects, player.y_vel)
     
 def main(window):
     clock = pygame.time.Clock()
